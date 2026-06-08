@@ -36,8 +36,8 @@ html {
 body {
   background: 
     linear-gradient(
-      rgba(10, 10, 12, 0.82), 
-      rgba(10, 10, 12, 0.82)
+      rgba(10, 10, 12, 0.50), 
+      rgba(10, 10, 12, 0.50)
     ),
     url('./images/background.jpg') no-repeat center center;
   background-size: cover;
@@ -234,7 +234,7 @@ ul { list-style: none; }
 
 /* ─── EXHIBITION SECTIONS ───────────────────────────────────────────── */
 .sec { padding: 8rem 0; border-bottom: var(--b-thick); }
-.sec-alt { background: rgba(18, 18, 23, 0.65); }
+.sec-alt { background: rgba(18, 18, 23, 0.30); }
 
 .gallery-head {
   margin-bottom: 5rem;
@@ -321,6 +321,76 @@ ul { list-style: none; }
 .card-cta:hover { 
   background: var(--text-pure);
   color: var(--bg);
+}
+
+/* ─── IMMERSIVE EXPERIENTIAL SECTION ───────────────────────────────────── */
+#theme-callout {
+  padding: 5rem 0;
+  background: transparent !important;
+}
+
+/* Enforce flex box grid mechanics for strict height equalization */
+#theme-callout .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+#theme-callout [class*="col-"] {
+  display: flex;
+  flex-direction: column;
+}
+
+#theme-callout .wrap {
+  background: transparent !important;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.theme-preview-box {
+  background: rgba(25, 25, 35, 0.6) !important;
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  padding: 1.5rem;
+  border-radius: 4px;
+  text-align: center;
+  transition: all 0.3s ease;
+  
+  /* Pushes buttons down to stay locked to the exact same bottom base line */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.theme-preview-box:hover {
+  border-color: rgba(212, 175, 55, 0.8);
+  transform: translateY(-3px);
+}
+
+.preview-badge {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+/* Modern Minimalist Gold Action Buttons */
+.theme-preview-box .btn {
+  display: block !important;
+  width: 100%;
+  background: transparent !important;
+  border: 1px solid #d4af37 !important; /* Gold wireframe */
+  color: #d4af37 !important;
+  font-family: 'Space Grotesk', sans-serif !important;
+  font-size: 0.8rem !important;
+  font-weight: 600 !important;
+  border-radius: 4px !important;
+  padding: 0.6rem 1rem !important;
+  transition: all 0.2s ease;
+}
+.theme-preview-box .btn:hover {
+  background: #d4af37 !important; /* Solid gold shift on cursor hover */
+  color: #12121a !important;
+  transform: translateY(-1px);
 }
 
 /* ─── MEMBERSHIP PLANS ──────────────────────────────────────────────── */
